@@ -214,7 +214,7 @@ public class PlayerController : MonoBehaviour
             _isJumping = false;
             animHandler?.PlayJump(false);
         }
-        // apply extra force to the jump height   
+        // apply extra force to the jump height
         var vel = _rigidbody.velocity;
         vel.y = jumpForce;
         _rigidbody.velocity = vel;
