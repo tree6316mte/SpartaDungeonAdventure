@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer = 1 << 0;
     public GameObject cinemachineCameraTarget;
     public PlayerAnimHandler animHandler;
+    public PlayerCondition condition;
     GameObject _mainCamera;
     PlayerInputHandler _inputHandler;
     CapsuleCollider _collider;
@@ -104,6 +105,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (_inputHandler.move != Vector2.zero && _inputHandler.sprint)
+        {
+            if (condition.UseStamina(condition.stamina.passiveValue * Time.deltaTime))
+            {
+                condition.stamina.Subtract(condition.stamina.passiveValue * Time.deltaTime);
+            }
+            else
+            {
+                _inputHandler.sprint = false;
+            }
+        }
+        else
+        {
+            condition.stamina.Add(condition.stamina.passiveValue * Time.deltaTime * 2.5f);
+        }
         Moving();
         Jumping();
     }
