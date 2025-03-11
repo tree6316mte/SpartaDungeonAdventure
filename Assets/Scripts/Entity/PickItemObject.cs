@@ -37,7 +37,6 @@ public class PickItemObject : MonoBehaviour, IInteractable
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("???");
         SkillManager.Instance.SetItem(data);
         Destroy(gameObject);
     }
