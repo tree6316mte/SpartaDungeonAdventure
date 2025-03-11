@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IInteractable
+public interface IInteractable
 {
     public string GetInteractPrompt();
     public void ShowOutline();
@@ -11,7 +11,7 @@ interface IInteractable
 }
 
 
-public class ItemObject : MonoBehaviour, IInteractable
+public class ShowItemObject : MonoBehaviour, IInteractable
 {
     public ItemData data;
     [SerializeField]

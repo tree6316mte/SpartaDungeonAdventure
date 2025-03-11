@@ -38,6 +38,12 @@ public class PlayerInputHandler : MonoBehaviour
         SprintInput(value.isPressed);
     }
 
+    public void OnSkill(InputValue value)
+    {
+        // SprintInput(value.isPressed);
+        SkillManager.Instance.ItemUse();
+    }
+
 
     public void MoveInput(Vector2 newMoveDirection)
     {

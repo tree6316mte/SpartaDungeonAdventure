@@ -14,3 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: "\uD3C9\uBC94\uD55C \uBB3C\uCCB4"
   description: "\uC544\uBB34 \uC4F8\uBAA8\uC5C6\uB294 \uBB3C\uCCB4"
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -6173926311381004246, guid: bd1cb1102ca046c488df027b30b81090,
+          type: 3}
+        m_TargetAssemblyTypeName: SkillManager, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

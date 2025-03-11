@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "SpartaDungeonAdventure.sln"
+    "dotnet.defaultSolution": "SpartaDungeonAdventure.sln",
 }
